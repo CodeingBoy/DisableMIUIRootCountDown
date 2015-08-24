@@ -1,0 +1,35 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="模块设置">
+
+    <PreferenceScreen
+        android:title="打开Root授权界面">
+        <intent android:action="miui.intent.action.ROOT_MANAGER" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:title="重新启动"
+        android:summary="所做的更改需要重启才能生效">
+
+    </PreferenceScreen>
+    <PreferenceCategory android:title="设置" >
+        <ListPreference
+            android:key="policy"
+            android:title="@string/title_policy"
+            android:defaultValue="0"
+            android:entries="@array/pref_policy_titles"
+            android:entryValues="@array/pref_policy_values"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="确定" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="关于">
+        <PreferenceScreen
+            android:title="版本"
+            android:key="version" />
+        <PreferenceScreen
+            android:title="开发者:CodeingBoy"
+            android:summary="点击访问我的博客">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="http://codeingboy.me" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+</PreferenceScreen>
